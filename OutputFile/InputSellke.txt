@@ -1,0 +1,4 @@
+Population: 1000
+Beta: 0.3
+Ny: 0.120
+Gamma: 0.2

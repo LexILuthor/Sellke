@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/popcorn/Desktop/0/UniTo/Tesi/Pugliese/Modelli Probabilistici/Sellke/Sellke.cpp
+vector
+-
+iostream
+-
+myFunctions.h
+C:/Users/popcorn/Desktop/0/UniTo/Tesi/Pugliese/Modelli Probabilistici/Sellke/myFunctions.h
+Sellke.h
+C:/Users/popcorn/Desktop/0/UniTo/Tesi/Pugliese/Modelli Probabilistici/Sellke/Sellke.h
+
+C:/Users/popcorn/Desktop/0/UniTo/Tesi/Pugliese/Modelli Probabilistici/Sellke/Sellke.h
+
+C:/Users/popcorn/Desktop/0/UniTo/Tesi/Pugliese/Modelli Probabilistici/Sellke/myFunctions.h
+algorithm
+-
+numeric
+-
+
