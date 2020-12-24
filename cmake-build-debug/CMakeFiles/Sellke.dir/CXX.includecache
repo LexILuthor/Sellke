@@ -6,16 +6,22 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/popcorn/Desktop/0/UniTo/Tesi/Pugliese/Modelli Probabilistici/Sellke/Sellke.cpp
+C:/Users/popcorn/Desktop/0/UniTo/Tesi/Pugliese/Modelli Probabilistici/Sellke/Sellke.h
+
+C:/Users/popcorn/Desktop/0/UniTo/Tesi/Pugliese/Modelli Probabilistici/Sellke/main.cpp
+iostream
+-
+fstream
+-
 vector
 -
-iostream
+cstdlib
+-
+random
 -
 myFunctions.h
 C:/Users/popcorn/Desktop/0/UniTo/Tesi/Pugliese/Modelli Probabilistici/Sellke/myFunctions.h
 Sellke.h
-C:/Users/popcorn/Desktop/0/UniTo/Tesi/Pugliese/Modelli Probabilistici/Sellke/Sellke.h
-
 C:/Users/popcorn/Desktop/0/UniTo/Tesi/Pugliese/Modelli Probabilistici/Sellke/Sellke.h
 
 C:/Users/popcorn/Desktop/0/UniTo/Tesi/Pugliese/Modelli Probabilistici/Sellke/myFunctions.h
