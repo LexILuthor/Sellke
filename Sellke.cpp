@@ -48,7 +48,11 @@ std::vector<double> sellke(int N, double beta, double ny, double gamma, std::vec
     startInfection.push_back(L[0]);
     endInfection.push_back(L[0] + I[0]);
 
+    //number of active intervals at time ts
     int number_of_active_intervals = 0;
+
+    //posizione (all'interno del vettore ordinato) dell'ultimo evento del tipo "persona diventa Recovered" che avviene prima del tempo ts
+    //NB non è sempre l'ultimo evento, potrebbe essere anche il penultimo
     int last_event_R = 0;
     while (last_infected < N - 1) {
         ts = integral(ts, last_infected, startInfection, endInfection, integral_value, Q, (beta / N),
