@@ -13,10 +13,10 @@
 
 void generate(std::vector<double> &Q, std::vector<double> &L, std::vector<double> &I, double ny, double gamma, int N) {
     // for random seed:
-    //std::default_random_engine generator(time(0));
+    std::default_random_engine generator(time(0));
 
     //fixed seed con 8 da problemi nella scrittura del file
-    std::default_random_engine generator(8);
+    //std::default_random_engine generator(8);
 
     std::exponential_distribution<double> exp1_distribution(1.0);
     std::exponential_distribution<double> expNy_distribution(ny);
