@@ -1,6 +1,8 @@
 # Sellke_Algorithm
 An implementation of the sellke algorithm to simulate SEIR epidemics
 
+Parameters (Population, gamma, beda ny) can be modified in the file "InputSellke.txt" in the folder "Output file"
+
 It writes a .csv file with five columns.
 
 1. the number of Suscettible individuals
