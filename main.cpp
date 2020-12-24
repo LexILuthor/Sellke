@@ -68,7 +68,7 @@ int main() {
     int t=0, s=0, e = 0;
     int caso = 0;
 
-    while (t + s + e < total_steps) {
+    while (t + s + e < total_steps-1) {
         if (t < last_infected + 1) {
             //setto caso uguale a:
             // 0 se il prossimo minimo è in time_vector (i.e avviene S->E)
