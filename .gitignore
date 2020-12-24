@@ -30,3 +30,12 @@
 *.exe
 *.out
 *.app
+
+
+# misc
+*.R
+*.Rhistory
+*.csv
+cmake-build-debug/
+.idea/
+CMakeLists.txt
