@@ -9,9 +9,10 @@
 
 
 std::vector<double> sellke(int N, double beta, double ny, double gamma, std::vector<double> &startInfection,
-                                std::vector<double> &endInfection);
+                           std::vector<double> &endInfection);
 
 
-double integral(double from,  int last_infected, std::vector<double> &startInfection,
-                std::vector<double> &endInfection, double &integral_value, std::vector<double> &Q,double beta);
+double integral(double from, int last_infected, std::vector<double> &startInfection,
+                std::vector<double> &endInfection, double &integral_value, std::vector<double> &Q, double beta,
+                int &numberofactiveintervals, int &last_event_R);
 

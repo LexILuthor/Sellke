@@ -48,9 +48,11 @@ std::vector<double> sellke(int N, double beta, double ny, double gamma, std::vec
     startInfection.push_back(L[0]);
     endInfection.push_back(L[0] + I[0]);
 
-
+    int number_of_active_intervals = 0;
+    int last_event_R = 0;
     while (last_infected < N - 1) {
-        ts = integral(ts, last_infected, startInfection, endInfection, integral_value, Q, (beta / N));
+        ts = integral(ts, last_infected, startInfection, endInfection, integral_value, Q, (beta / N),
+                      number_of_active_intervals,last_event_R);
         if (ts == -1) {
             //non abbiamo più nuovi contagi
             break;
@@ -60,7 +62,7 @@ std::vector<double> sellke(int N, double beta, double ny, double gamma, std::vec
             startInfection.push_back(ts + L[last_infected]);
             endInfection.push_back(ts + L[last_infected] + I[last_infected]);
             //teoricamente il comando seguente è già vero
-            //integral_value = Q[last_infected];
+            integral_value = Q[last_infected];
         }
 
     }
@@ -84,13 +86,14 @@ std::vector<double> sellke(int N, double beta, double ny, double gamma, std::vec
 
 
 double integral(double from, int last_infected, std::vector<double> &startInfection,
-                std::vector<double> &endInfection, double &integral_value, std::vector<double> &Q, double beta) {
+                std::vector<double> &endInfection, double &integral_value, std::vector<double> &Q, double beta,
+                int &numberofactiveintervals,int &last_event_R) {
     std::vector<size_t> indexStartInfection = sort_indexes(startInfection);
     std::vector<size_t> indexEndInfection = sort_indexes(endInfection);
 
     //compute the number of intervals that contains "from", it also sets not_ordered_j to the last individual before from
-    int last_event_R;
-    int numberofactiveintervals = activeintervels(from, startInfection, endInfection, indexEndInfection, last_event_R);
+    //int last_event_R;
+    //activeintervels(from, startInfection, endInfection, indexEndInfection, last_event_R);
     int last_event_I = last_event_R;
 
     double last_from = from;
@@ -116,7 +119,10 @@ double integral(double from, int last_infected, std::vector<double> &startInfect
 
 
                     //comando inutile, è solo di controllo
-                    integral_value = integral_value + numberofactiveintervals * beta * (from - last_from);
+                    // NB se si toglie controllare che il comando
+                    // integral_value = Q[last_infected];
+                    // a riga 64 sia attivo
+                    //integral_value = integral_value + numberofactiveintervals * beta * (from - last_from);
 
 
                     return from;
@@ -140,7 +146,10 @@ double integral(double from, int last_infected, std::vector<double> &startInfect
 
 
                     //comando inutile, è solo di controllo
-                    integral_value = integral_value + numberofactiveintervals * beta * (from - last_from);
+                    // NB se si toglie controllare che il comando
+                    // integral_value = Q[last_infected];
+                    // a riga 64 sia attivo
+                    //integral_value = integral_value + numberofactiveintervals * beta * (from - last_from);
 
                     return from;
                 } else {

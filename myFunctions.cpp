@@ -46,17 +46,15 @@ void generate(std::vector<double> &Q, std::vector<double> &L, std::vector<double
 }
 
 
-int activeintervels(double from, std::vector<double> &startInfection, std::vector<double> &endInfection,
-                    std::vector<size_t> indexEndInfection, int &last) {
+void activeintervels(double from, std::vector<double> &startInfection, std::vector<double> &endInfection,
+                     std::vector<size_t> indexEndInfection, int &last) {
     int numberofactiveintervals = 0;
-    for (int j=0; j<indexEndInfection.size();j++) {
-        int i=indexEndInfection[j];
+    for (int j = 0; j < indexEndInfection.size(); j++) {
+        int i = indexEndInfection[j];
         if (endInfection[i] < from) {
-            last=j;
-        }
-        else if (startInfection[i] < from && endInfection[i] > from) {
+            last = j;
+        } else if (startInfection[i] < from && endInfection[i] > from) {
             numberofactiveintervals++;
         }
     }
-    return numberofactiveintervals;
 }

@@ -18,7 +18,7 @@ std::vector<double> rand_Exponential(int nSamples = 1, double lambda = 1);
 void generate(std::vector<double> &Q, std::vector<double> &L, std::vector<double> &I, double ny, double gamma, int N);
 
 
-int activeintervels(double from, std::vector<double> &startInfection, std::vector<double> &endInfection,
+void activeintervels(double from, std::vector<double> &startInfection, std::vector<double> &endInfection,
                     std::vector<size_t> indexEndInfection,int &last);
 
 
