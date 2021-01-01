@@ -9,8 +9,9 @@
 
 int main() {
     //std::srand(3453);
-    char outputpath[] = "C:\\Users\\popcorn\\Desktop\\0\\UniTo\\Tesi\\Pugliese\\Modelli Probabilistici\\Sellke\\OutputFile\\sellke.csv";
-    char inputpath[] = "C:\\Users\\popcorn\\Desktop\\0\\UniTo\\Tesi\\Pugliese\\Modelli Probabilistici\\Sellke\\OutputFile\\InputSellke.txt";
+
+    char outputpath[] = "../OutputFIle/sellke.csv";
+    char inputpath[] = "../OutputFIle/InputSellke.txt";
 
     //Population
     int N;
