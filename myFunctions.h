@@ -24,7 +24,7 @@ void activeintervels(double from, std::vector<double> &startInfection, std::vect
 
 
 
-//template for the function that returns the ordered inex
+//template for the function that returns the ordered index
 #include <algorithm>
 #include <numeric>      // std::iota
 
